@@ -1,0 +1,32 @@
+@import '../../index.css';
+
+.navbar{
+    height: 80px;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+.navbar-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0px 40px;
+}
+
+.navbar-item{
+    flex: 1;
+}
+
+.navbar-item:nth-child(1){
+    text-align: left;
+}
+
+.navbar-item:nth-child(2){
+    text-align: center;
+}
+
+.navbar-item:nth-child(3){
+    text-align: right;
+}
