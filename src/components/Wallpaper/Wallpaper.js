@@ -3,7 +3,7 @@ import styles from './Wallpaper.module.css'
 
 const Wallpaper = (props) => {
     const backgroundImage = {
-        backgroundImage: `url('${props.image}')`,
+        backgroundImage: `url(${props.image})`,
         backgroundRepeat: 'no-repeat',
         backgroundAttachment: 'fixed',
         backgroundPosition: 'center',
@@ -13,7 +13,7 @@ const Wallpaper = (props) => {
     console.log(backgroundImage);
 
     return (
-        <section className={styles.wallpaper} style={{}}>
+        <section className={styles.wallpaper} style={backgroundImage}>
             <div className="container" style={{height: '100%'}}>
               <div className={styles.container}>
                 <h1>Valorant <br/> {props.title}</h1>

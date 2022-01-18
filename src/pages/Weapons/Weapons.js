@@ -5,6 +5,8 @@ import axios from "axios";
 import Loader from "../../components/Loader/Loader";
 import Wallpaper from "../../components/Wallpaper/Wallpaper";
 
+import OmenWallpaper from '../../images/omen-wallpaper.jpg'
+
 const Weapons = ({match}) => {
   const [category, setCategory] = useState('')
   const [weapons, setWeapons] = useState([])
@@ -38,7 +40,7 @@ const Weapons = ({match}) => {
         isLoading?
         <Loader />:
         <>
-          <Wallpaper title="Weapons" image='../../images/omen-wallpaper.jpg'/>
+          <Wallpaper title="Weapons" image={OmenWallpaper}/>
 
           <section className={styles.content}>
             
