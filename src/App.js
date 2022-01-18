@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
+import {BrowserRouter as Router, Switch, Route, Redirect} from 'react-router-dom'
 import Nav from './components/Nav/Nav';
 import Home from './pages/Home/Home';
 import Weapons from './pages/Weapons/Weapons';
@@ -13,8 +13,9 @@ function App() {
         <Nav />
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/weapons" component={Weapons} />
-          <Route path="/agents" component={Agents} />
+          <Route path="/weapons/:category" exact  component={Weapons} />
+          <Route path="/agents" exact component={Agents} />
+          <Redirect from="/weapons" to="weapons/Sidearms"/>
         </Switch>
       </div>
 
