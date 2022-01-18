@@ -3,6 +3,7 @@ import styles from './Weapons.module.css'
 import {Link} from 'react-router-dom'
 import axios from "axios";
 import Loader from "../../components/Loader/Loader";
+import Wallpaper from "../../components/Wallpaper/Wallpaper";
 
 const Weapons = ({match}) => {
   const [category, setCategory] = useState('')
@@ -33,18 +34,11 @@ const Weapons = ({match}) => {
   
   return (
     <React.Fragment>
-      
       {
         isLoading?
         <Loader />:
         <>
-          <section className={styles.wallpaper}>
-            <div className="container" style={{height: '100%'}}>
-              <div className={styles.container}>
-                <h1>Valorant <br/> Weapons</h1>
-              </div>
-            </div>
-          </section>
+          <Wallpaper title="Weapons" image='../../images/omen-wallpaper.jpg'/>
 
           <section className={styles.content}>
             
@@ -56,8 +50,6 @@ const Weapons = ({match}) => {
           </section>
         </>
       }
-
-      
     </React.Fragment>
 
   );
