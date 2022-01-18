@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Nav from './components/Nav/Nav';
-import Home from './pages/Home';
+import Home from './pages/Home/Home';
 import Weapons from './pages/Weapons';
 import Agents from './pages/Agents';
 
