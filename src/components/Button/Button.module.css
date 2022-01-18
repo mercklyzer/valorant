@@ -12,11 +12,13 @@
     position: relative;
     overflow: hidden;
     margin: 10px 0px;
+    text-decoration: none;
     /* border: 2px solid red; */
 }
 
 .buttonContainer:hover{
     cursor: pointer;
+    color: var(--white);
 }
 
 .buttonContainer::before{

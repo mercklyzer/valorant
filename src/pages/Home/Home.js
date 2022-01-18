@@ -15,8 +15,8 @@ const Home = () => {
           <ValorantTitle className="title" />
         </div>
         <div className="buttons-container">
-          <Button title="Agents" />
-          <Button title="Weapons" />
+          <Button title="Agents" to="/agents"/>
+          <Button title="Weapons" to="/weapons"/>
         </div>
       </div>
     </div>
