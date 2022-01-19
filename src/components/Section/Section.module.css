@@ -1,0 +1,6 @@
+@import '../../index.css';
+
+.content{
+    background-color: var(--beige);
+    padding: 80px 0px;
+}

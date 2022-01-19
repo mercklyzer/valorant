@@ -10,16 +10,14 @@ const Wallpaper = (props) => {
         backgroundSize: 'cover',
     }
 
-    console.log(backgroundImage);
-
     return (
-        <section className={styles.wallpaper} style={backgroundImage}>
-            <div className="container" style={{height: '100%'}}>
-              <div className={styles.container}>
-                <h1>Valorant <br/> {props.title}</h1>
-              </div>
-            </div>
-          </section>
+      <section className={styles.wallpaper} style={backgroundImage}>
+        <div className="container" style={{height: '100%'}}>
+          <div className={styles.container}>
+            {props.children}
+          </div>
+        </div>
+      </section>
     )
 }
 

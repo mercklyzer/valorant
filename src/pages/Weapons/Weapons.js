@@ -6,6 +6,7 @@ import Loader from "../../components/Loader/Loader";
 import Wallpaper from "../../components/Wallpaper/Wallpaper";
 
 import OmenWallpaper from '../../images/omen-wallpaper.jpg'
+import Section from "../../components/Section/Section";
 
 const Weapons = ({match}) => {
   const [category, setCategory] = useState('')
@@ -14,6 +15,9 @@ const Weapons = ({match}) => {
 
   useEffect(() => {
     setCategory(match.params.category)
+
+    axios.get('https://valorant-api.com/v1/weapons')
+    .then(res => console.log(res))
 
     setIsLoading(true)
     axios.get(`https://valorant-weapons.p.rapidapi.com/${match.params.category}`, {
@@ -40,16 +44,17 @@ const Weapons = ({match}) => {
         isLoading?
         <Loader />:
         <>
-          <Wallpaper title="Weapons" image={OmenWallpaper}/>
+          <Wallpaper title="Weapons" image={OmenWallpaper}>
+            <h1>Valorant <br/> Weapons </h1>
+          </Wallpaper>
 
-          <section className={styles.content}>
-            
+          <Section>
             <div className="container">
               {weaponTableHeader(category)}
 
               {weaponTable(category, weapons)}
             </div>
-          </section>
+          </Section>
         </>
       }
     </React.Fragment>
@@ -69,8 +74,8 @@ const weaponTableHeader = (category) => {
               <div className={`${styles.category}`}>
                 {category.toUpperCase()}
                 <div className={`dropdown ${styles.dropdown}`}>
-                <a className={`dropdown-toggle ${styles.toggle}`} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                </a>
+                <Link className={`dropdown-toggle ${styles.toggle}`} role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                </Link>
 
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
                   <li><Link className="dropdown-item" to="/weapons/Sidearms">Sidearms</Link></li>
@@ -108,7 +113,9 @@ const weaponTable = (category, weapons) => {
           return (
             <tr className={`shadow`} key={index}>
               <th scope="col" className={`${styles.bodyCell} ${styles.cream1}`}>{category}</th>
-              <th className={`${styles.bodyCell} ${styles.cream2}`}>-{weapon.name.toUpperCase()}-</th>
+              <th className={`${styles.bodyCell} ${styles.cream2}`}>
+                  <Link to={`/weapon/${weapon.name}`} className={styles.link}>-{weapon.name.toUpperCase()}-</Link>
+                </th>
               <th className={`${styles.bodyCell} ${styles.cream1}`}>{weapon.cost}</th>
             </tr>
           )

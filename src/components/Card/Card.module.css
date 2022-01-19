@@ -1,0 +1,119 @@
+@import '../../index.css';
+
+.container{
+    /* max-height: 200px; */
+    width: 100%;
+    border: 2px solid white;
+    min-height: 100%;
+    cursor: pointer;
+    position: relative;
+    overflow:hidden;
+}
+
+.hoverContainer{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-color: rgba(255, 70, 85, 0.7);
+    left: -100%;
+    transition: 0.2s ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.roleName{
+    margin-top: 24px;
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.container:hover .hoverContainer{
+    left: 0;
+}
+
+.container:hover .description, .container:hover .header{
+    opacity: 0;
+}
+
+.header{
+    height: 30%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+.body{
+    display: flex;
+    flex-direction: row;
+}
+
+.heroIconContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heroIcon{
+    margin: 20px 0px;
+    max-width: 50%;
+    /* height: 100%; */
+}
+
+.description{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Roboto', sans-serif;
+    /* text-align: left; */
+    font-size: 16px;
+    font-weight: 400;
+    /* border: 2px solid red; */
+}
+
+@media only screen and (min-width:576px){
+    .heroIcon{
+        min-width: 100%;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .header{
+        justify-content: flex-start;
+    }
+
+    .heroIcon{
+        min-width: 50%;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (min-width:992px){
+    .header{
+        font-size: 40px;
+    }
+
+    .heroIcon{
+        min-width: 100%;
+    }
+
+    .description{
+        font-size: 16px;
+    }
+}
