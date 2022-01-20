@@ -1,0 +1,199 @@
+@import '../../index.css';
+
+.header{
+    min-height: calc(90vh - 80px);
+    width: 100%;
+    position: relative;
+}
+
+.backgroundVideo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.overlay{
+    content: '';
+    background-color: rgba(0,0,0,0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.portraitContainer{
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.portrait{
+    max-width: 60%;
+}
+
+.agentName{
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 44px;
+}
+
+.agentRole{
+    color: var(--white);
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+.agentDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+
+    padding: 0px 40px;
+}
+
+.agentIcon{
+    margin: 20px 20px;
+}
+
+.title{
+    font-family: 'Roboto', sans-serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--button-black);
+    margin-bottom: 40px;
+}
+
+.abilityCard{
+    min-height: 100%;
+    padding: 16px;
+    background-color: var(--button-black);
+    cursor: pointer;
+    position: relative;
+}
+
+.abilityCardOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    transition: 0.4s;
+    z-index: 0;
+}
+
+.abilityCard:hover .abilityCardOverlay {
+    background-color: rgba(255, 70, 85, 0.5)
+    ;
+}
+
+.abilityHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 2px solid var(--beige);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    z-index: 1;
+}
+
+.abilityIcon{
+    max-width: 30%;
+}
+
+.abilityName{
+    color: var(--beige);
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+.abilityDescription{
+    color: var(--beige);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+}
+
+@media only screen and (max-height: 425px) and (min-width:500px){
+    .agentRowContainer{
+        flex-direction: row !important;
+        border: 2px solid white;
+    }
+
+    .portraitContainer{
+        height: 100%;
+    }
+
+    .portrait{
+        max-height: 70%;
+    }
+
+    .agentName{
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .agentIcon{
+        max-width: 40%;
+        margin: 10px;
+    }
+
+    .agentRole{
+        font-weight: 600;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-height: 425px) and (min-width:500px){
+    .agentRowContainer{
+        border: 2px solid white;
+    }
+
+    .portraitContainer{
+        height: 100%;
+    }
+
+    .portrait{
+        max-height: 70%;
+    }
+
+    .agentName{
+        font-weight: 600;
+        font-size: 30px;
+    }
+
+    .agentIcon{
+        max-width: 40%;
+        margin: 10px;
+    }
+
+    .agentRole{
+        font-weight: 600;
+        font-size: 18px;
+    }
+
+    .description{
+        display: none !important;
+    }
+}

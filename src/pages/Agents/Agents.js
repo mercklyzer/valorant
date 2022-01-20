@@ -6,10 +6,20 @@ import Wallpaper from "../../components/Wallpaper/Wallpaper";
 import styles from './Agents.module.css'
 import Section from "../../components/Section/Section";
 import Card from "../../components/Card/Card";
+import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 const Agents = () => {
   const [isLoading, setIsLoading] = useState(false)
   const [agents, setAgents] = useState([])
+
+  const history = useHistory()
+
+  const routeChange = (uuid) => {
+    let path = `/agents/${uuid}`
+    history.push(path)
+    console.log("route change");
+  }
 
   useEffect(() => {
 
@@ -44,15 +54,20 @@ const Agents = () => {
                 {
                   agents.map((agent, index) => { 
                     
-                    return agent.role?.displayIcon? <div className="col-md-6 col-sm-12" key={index}>
-                      <Card 
-                        name={agent.displayName} 
-                        image={agent.displayIcon} 
-                        description={agent.description}
-                        roleName={agent.role?.displayName? agent.role.displayName: 'None'}
-                        roleIcon={agent.role?.displayIcon? agent.role.displayIcon: ''}
-                      />
-                    </div> : <></>}
+                    return agent.role?.displayIcon? 
+                      <div className="col-md-6 col-sm-12" key={index}>
+                        <Card 
+                          name={agent.displayName} 
+                          image={agent.displayIcon} 
+                          description={agent.description}
+                          roleName={agent.role?.displayName? agent.role.displayName: 'None'}
+                          roleIcon={agent.role?.displayIcon? agent.role.displayIcon: ''}
+                          redirect={routeChange}
+                          uuid={agent.uuid}
+                          />
+                      </div> :
+                    
+                    <></>}
                   )
                 }
 

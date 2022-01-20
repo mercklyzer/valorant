@@ -3,7 +3,7 @@ import styles from './Card.module.css'
 
 const Card = props => {
     return (
-        <div className={`${styles.container}`}>
+        <div className={`${styles.container}`} onClick={() => props.redirect(props.uuid)}>
             <div className={styles.hoverContainer}>
                 <img src={props.roleIcon} className={styles.roleIcon}/>
                 <span className={styles.roleName}>{props.roleName}</span>
