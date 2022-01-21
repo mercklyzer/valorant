@@ -78,12 +78,12 @@ const weaponTableHeader = (category) => {
                 </Link>
 
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                  <li><Link className="dropdown-item" to="/weapons/Sidearms">Sidearms</Link></li>
-                  <li><Link className="dropdown-item" to="/weapons/SMGS">SMGS</Link></li>
-                  <li><Link className="dropdown-item" to="/weapons/Shotguns">Shotguns</Link></li>
-                  <li><Link className="dropdown-item" to="/weapons/Rifles">Rifles</Link></li>
-                  <li><Link className="dropdown-item" to="/weapons/Snipers">Snipers</Link></li>
-                  <li><Link className="dropdown-item" to="/weapons/LMGS">LMGS</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/Sidearms`}>Sidearms</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/SMGS`}>SMGS</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/Shotguns`}>Shotguns</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/Rifles`}>Rifles</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/Snipers`}>Snipers</Link></li>
+                  <li><Link className="dropdown-item" to={`${process.env.PUBLIC_URL}/weapons/LMGS`}>LMGS</Link></li>
                 </ul>
               </div>
             </div>
