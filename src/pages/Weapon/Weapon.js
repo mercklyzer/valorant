@@ -64,7 +64,7 @@ const Weapon = ({match}) => {
                                 <td scope="col" className={``}>{weapon.fire_rate}</td>
                             </tr>
                             <tr className={''}>
-                                <th scope="col" rowSpan="3"style={{verticalAlign: 'center'}}>DAMAGE</th>
+                                <th scope="col" style={{verticalAlign: 'middle'}}>DAMAGE</th>
                                 <td scope="col" className={``}>
                                     <table className="table table-bordered table-dark table-striped shadow">
                                         {weapon.damage? <tbody>

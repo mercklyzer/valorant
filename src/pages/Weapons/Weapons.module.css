@@ -83,6 +83,11 @@
 .link{
     color: var(--button-black);
     text-decoration: none;
+    transition: 0.4s;
+}
+
+.link:hover{
+    color: var(--red);
 }
 
 @media only screen and (max-width: 768px){

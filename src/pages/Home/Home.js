@@ -15,8 +15,8 @@ const Home = () => {
           <ValorantTitle className="title" />
         </div>
         <div className="buttons-container">
-          <Button title="Agents" to="/agents"/>
-          <Button title="Weapons" to="/weapons"/>
+          <Button title="Agents" to="/agents" style={{boxShadow: '4px 4px 10px #f9f9f9'}}/>
+          <Button title="Weapons" to="/weapons" style={{backgroundColor: '#f9f9f9', color: 'black'}}/>
         </div>
       </div>
     </div>

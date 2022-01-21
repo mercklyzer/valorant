@@ -24,9 +24,39 @@
 }
 
 .navbar-item:nth-child(2){
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
 }
 
 .navbar-item:nth-child(3){
     text-align: right;
 }
+
+.navbar-valorant-title{
+    transition: 0.4s;
+    margin: 0px 20px;
+}
+
+.navbar-button{
+    transition: 0.4s;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-button:hover, .active{
+    color:var(--red);
+}
+
+@media screen and (max-width: 600px){
+    .navbar-item:nth-child(1), .navbar-item:nth-child(3){
+        display: none;
+    }
+}
+
+
