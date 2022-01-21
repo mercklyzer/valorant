@@ -7,6 +7,7 @@ import {ReactComponent as ValorantTitle} from '../../images/valorant-title.svg'
 const Home = () => {
   return (
     <div className="screen">
+      <div>rawr</div>
       <video autoPlay={true} muted={true} loop={true}>
         <source src={require('../../videos/valorant-trailer.mp4')} type="video/mp4" />
       </video>
