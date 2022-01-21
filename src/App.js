@@ -22,7 +22,7 @@ function App() {
           <Route path={`${process.env.PUBLIC_URL}/agents`} exact component={Agents} />
           <Route path={`${process.env.PUBLIC_URL}/agents/:uuid`} exact component={Agent} />
 
-          <Redirect from={`${process.env.PUBLIC_URL}/weapons`} to={`${process.env.PUBLIC_URL}weapons/Sidearms`}/>
+          <Redirect from={`${process.env.PUBLIC_URL}/weapons`} to={`${process.env.PUBLIC_URL}/weapons/Sidearms`}/>
         </Switch>
         </div>
       </div>
