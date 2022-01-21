@@ -16,13 +16,13 @@ function App() {
         <div style={{overflow: 'hidden'}}>
 
         <Switch>
-          <Route path="/" exact component={Home} />
-          <Route path="/weapons/:category" exact  component={Weapons} />
-          <Route path="/weapon/:weapon" exact  component={Weapon} />
-          <Route path="/agents" exact component={Agents} />
-          <Route path="/agents/:uuid" exact component={Agent} />
+          <Route path={`${process.env.PUBLIC_URL}/`} exact component={Home} />
+          <Route path={`${process.env.PUBLIC_URL}/weapons/:category`} exact  component={Weapons} />
+          <Route path={`${process.env.PUBLIC_URL}/weapon/:weapon`} exact  component={Weapon} />
+          <Route path={`${process.env.PUBLIC_URL}/agents`} exact component={Agents} />
+          <Route path={`${process.env.PUBLIC_URL}/agents/:uuid`} exact component={Agent} />
 
-          <Redirect from="/weapons" to="weapons/Sidearms"/>
+          <Redirect from={`${process.env.PUBLIC_URL}/weapons`} to={`${process.env.PUBLIC_URL}weapons/Sidearms`}/>
         </Switch>
         </div>
       </div>

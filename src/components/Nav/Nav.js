@@ -8,9 +8,8 @@ import { Link, useHistory, useLocation } from "react-router-dom";
 const Nav = () => {
   const history = useHistory()
   const routeChange = () => {
-    let path = `/`
+    let path = `${process.env.PUBLIC_URL}/`
     history.push(path)
-    console.log("route change");
   }
 
   let location = useLocation()
@@ -23,9 +22,9 @@ const Nav = () => {
           <div className="navbar-item"><RiotLogo fill="orange"/></div>
             
             <div className="navbar-item">
-              <Link to="/agents" className={`navbar-button ${location.pathname.includes('/agent')? 'active' : ''}`}>Agents</Link>
+              <Link to={`${process.env.PUBLIC_URL}/agents`} className={`navbar-button ${location.pathname.includes('/agent')? 'active' : ''}`}>Agents</Link>
               <ValorantTitle className={`navbar-valorant-title`} fill={isMouseOver || location.pathname === '/'? '#ff4655' : 'white'} onMouseOver={() => setIsMouseOver(true)} onMouseOut={() => setIsMouseOver(false)} onClick={routeChange} style={{cursor:'pointer'}}/>
-              <Link to="/weapons" className={`navbar-button ${location.pathname.includes('/weapon')? 'active' : ''}`}>Weapons</Link>
+              <Link to={`${process.env.PUBLIC_URL}/weapons`} className={`navbar-button ${location.pathname.includes('/weapon')? 'active' : ''}`}>Weapons</Link>
             </div>
             
           <div className="navbar-item"><ValorantLogo fill="white"/></div>

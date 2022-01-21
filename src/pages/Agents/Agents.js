@@ -16,7 +16,7 @@ const Agents = () => {
   const history = useHistory()
 
   const routeChange = (uuid) => {
-    let path = `/agents/${uuid}`
+    let path = `${process.env.PUBLIC_URL}/agents/${uuid}`
     history.push(path)
     console.log("route change");
   }
