@@ -1,4 +1,4 @@
-import React, { useEffect, useState }  from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Wallpaper from "../../components/Wallpaper/Wallpaper";
 import OmenWallpaper from '../../images/omen-wallpaper.jpg'
