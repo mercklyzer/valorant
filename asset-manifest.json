@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/react-gh-pages/static/css/main.746892f1.css",
+    "main.js": "/react-gh-pages/static/js/main.5847070e.js",
+    "static/js/787.756f1a78.chunk.js": "/react-gh-pages/static/js/787.756f1a78.chunk.js",
+    "static/media/valorant-trailer.mp4": "/react-gh-pages/static/media/valorant-trailer.d2e42e250ac6363ef1e3.mp4",
+    "static/media/valorant-background-video.mp4": "/react-gh-pages/static/media/valorant-background-video.3939569c82604ef97bdc.mp4",
+    "static/media/omen-wallpaper.jpg": "/react-gh-pages/static/media/omen-wallpaper.851fe1be1fb8638b5ad4.jpg",
+    "static/media/jett-wallpaper.png": "/react-gh-pages/static/media/jett-wallpaper.eb897401e51141aab5a8.png",
+    "static/media/hand-loader.gif": "/react-gh-pages/static/media/hand-loader.cb5f5e59cc69e44aa403.gif",
+    "static/media/valorant-title.svg": "/react-gh-pages/static/media/valorant-title.7bb17ab6dc3fd813403c3d0c8b1b5983.svg",
+    "index.html": "/react-gh-pages/index.html",
+    "static/media/riot-logo.svg": "/react-gh-pages/static/media/riot-logo.ac56487c90f191dcdfc2688626a72896.svg",
+    "static/media/valorant-logo.svg": "/react-gh-pages/static/media/valorant-logo.6a12944dd6bf87e2790dc4867e95c9f6.svg",
+    "main.746892f1.css.map": "/react-gh-pages/static/css/main.746892f1.css.map",
+    "main.5847070e.js.map": "/react-gh-pages/static/js/main.5847070e.js.map",
+    "787.756f1a78.chunk.js.map": "/react-gh-pages/static/js/787.756f1a78.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.746892f1.css",
+    "static/js/main.5847070e.js"
+  ]
+}
