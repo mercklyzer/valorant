@@ -114,7 +114,7 @@ const weaponTable = (category, weapons) => {
             <tr className={`shadow`} key={index}>
               <th scope="col" className={`${styles.bodyCell} ${styles.cream1}`}>{category}</th>
               <th className={`${styles.bodyCell} ${styles.cream2}`}>
-                  <Link to={`/weapon/${weapon.name}`} className={styles.link}>-{weapon.name.toUpperCase()}-</Link>
+                  <Link to={`${process.env.PUBLIC_URL}/weapon/${weapon.name}`} className={styles.link}>-{weapon.name.toUpperCase()}-</Link>
                 </th>
               <th className={`${styles.bodyCell} ${styles.cream1}`}>{weapon.cost}</th>
             </tr>
