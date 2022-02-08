@@ -6,4 +6,4 @@ Valorant is a popular first-person shooter (FPS) game. This website is a directo
 https://mercklyzer.github.io/valorant/
 
 ## Technology Used:
-* Angular
+* ReactJS
